@@ -1,5 +1,5 @@
 # Git_Assignment
-🔁 1. --soft Reset
+ 1. --soft Reset
 
     Command:
 
@@ -22,7 +22,7 @@ Example:
     git reset --soft HEAD~1
     # The last commit is undone, but the code is still staged.
 
-🔄 2. --mixed Reset (default)
+ 2. --mixed Reset (default)
 
     Command:
 
@@ -45,7 +45,7 @@ Example:
     git reset --mixed HEAD~1
     # The last commit is undone, changes remain in the working directory, but are unstaged.
 
-🔥 3. --hard Reset
+ 3. --hard Reset
 
     Command:
 
