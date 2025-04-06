@@ -2,20 +2,28 @@
 using namespace std;
 
 int main() {
-    int n;
-    long factorial = 1.0;
+    int n, t1 = 0, t2 = 1, nextTerm = 0;
 
-    cout << "Enter a positive integer: ";
+    cout << "Enter the number of terms: ";
     cin >> n;
 
-    if (n < 0)
-        cout << "Error! Factorial of a negative number doesn't exist.";
-    else {
-        for(int i = 1; i <= n; ++i) {
-            factorial *= i;
-        }
-        cout << "Factorial of " << n << " = " << factorial;    
-    }
+    cout << "Fibonacci Series: ";
 
+    for (int i = 1; i <= n; ++i) {
+        // Prints the first two terms.
+        if(i == 1) {
+            cout << t1 << ", ";
+            continue;
+        }
+        if(i == 2) {
+            cout << t2 << ", ";
+            continue;
+        }
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+        
+        cout << nextTerm << ", ";
+    }
     return 0;
 }
